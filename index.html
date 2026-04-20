@@ -32,7 +32,15 @@
       backdrop-filter: blur(14px);
       border-bottom: 1px solid rgba(255,255,255,0.07);
     }
-    .logo-img { height: 36px; width: auto;  display: block; }
+    .logo-img { height: 36px; width: auto; display: block; }
+    .logo-svg { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .logo-icon-svg { flex-shrink: 0; }
+    .logo-text-wrap { display: flex; flex-direction: column; line-height: 1.1; }
+    .logo-text-top { font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.55); font-family: 'DM Sans', sans-serif; font-weight: 400; }
+    .logo-text-bottom { font-size: 16px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white); font-family: 'DM Sans', sans-serif; font-weight: 600; }
+    .footer-logo-svg { display: flex; align-items: center; gap: 8px; opacity: 0.4; }
+    .footer-logo-text-top { font-size: 8px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--white); font-family: 'DM Sans', sans-serif; font-weight: 400; }
+    .footer-logo-text-bottom { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white); font-family: 'DM Sans', sans-serif; font-weight: 600; }
     nav ul { list-style: none; display: flex; gap: 2rem; align-items: center; }
     nav ul a { text-decoration: none; color: rgba(255,255,255,0.65); font-size: 14px; letter-spacing: 0.03em; transition: color .2s; }
     nav ul a:hover { color: var(--white); }
@@ -254,8 +262,21 @@
 <body>
 
 <nav>
-  <a href="#">
-    <img class="logo-img" src="logo.png" alt="Gestión Comercial Esquivel" />
+  <a href="#" class="logo-svg">
+    <!-- Ícono E con check, replica del logo original -->
+    <svg class="logo-icon-svg" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Marco exterior tipo E -->
+      <rect x="2" y="2" width="20" height="30" rx="1" stroke="rgba(255,255,255,0.85)" stroke-width="1.8" fill="none"/>
+      <!-- Líneas horizontales de la E -->
+      <line x1="2" y1="11" x2="16" y2="11" stroke="rgba(255,255,255,0.85)" stroke-width="1.8"/>
+      <line x1="2" y1="20" x2="13" y2="20" stroke="rgba(255,255,255,0.85)" stroke-width="1.8"/>
+      <!-- Check verde diagonal -->
+      <line x1="15" y1="7" x2="22" y2="14" stroke="#3a7d5a" stroke-width="2.2" stroke-linecap="round"/>
+    </svg>
+    <div class="logo-text-wrap">
+      <span class="logo-text-top">Gestión Comercial</span>
+      <span class="logo-text-bottom">Esquivel</span>
+    </div>
   </a>
   <ul>
     <li><a href="#servicios">Servicios</a></li>
@@ -505,7 +526,18 @@
 </section>
 
 <footer>
-  <img class="footer-logo" src="logo.png" alt="Gestión Comercial Esquivel" />
+  <div class="footer-logo-svg">
+    <svg width="26" height="26" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="2" width="20" height="30" rx="1" stroke="rgba(255,255,255,0.85)" stroke-width="1.8" fill="none"/>
+      <line x1="2" y1="11" x2="16" y2="11" stroke="rgba(255,255,255,0.85)" stroke-width="1.8"/>
+      <line x1="2" y1="20" x2="13" y2="20" stroke="rgba(255,255,255,0.85)" stroke-width="1.8"/>
+      <line x1="15" y1="7" x2="22" y2="14" stroke="#3a7d5a" stroke-width="2.2" stroke-linecap="round"/>
+    </svg>
+    <div style="display:flex;flex-direction:column;line-height:1.1;">
+      <span class="footer-logo-text-top">Gestión Comercial</span>
+      <span class="footer-logo-text-bottom">Esquivel</span>
+    </div>
+  </div>
   <p>© 2026 Gestión Comercial Esquivel · Todos los derechos reservados</p>
   <div class="footer-links">
     <a href="tel:+50688356653">8835 6653</a>
